@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Post;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -36,4 +37,19 @@ class PostController extends Controller
             ]
         );
     }
+    public function search(Request $request)
+{
+    $query = $request->input('query');
+
+    // Cari post berdasarkan title atau body yang mengandung kata kunci
+    $posts = Cache::remember("search_results_{$query}", 60, function () use ($query) {
+        return Post::where('title', 'like', "%{$query}%")
+                   ->orWhere('body', 'like', "%{$query}%")
+                   ->latest()
+                   ->paginate(10);
+    });
+
+    return view('posts.search', compact('posts', 'query'));
+}
+    
 }

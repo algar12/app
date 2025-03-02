@@ -1,20 +1,19 @@
-# Gunakan image FrankenPHP resmi
 FROM dunglas/frankenphp:latest
 
-# Set working directory
 WORKDIR /app
 
-# Copy seluruh project Laravel ke dalam container
+# Install ekstensi yang diperlukan
+RUN apt-get update && apt-get install -y \
+    libicu-dev zlib1g-dev libzip-dev \
+    && docker-php-ext-configure zip \
+    && docker-php-ext-install intl zip
+
+# Install Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 COPY . .
 
-# Install dependensi Laravel
+# Jalankan Composer install
 RUN composer install --no-dev --optimize-autoloader
 
-# Set permission untuk storage dan bootstrap
-RUN chmod -R 777 storage bootstrap/cache
-
-# Expose port 80 agar bisa diakses
-EXPOSE 80
-
-# Jalankan aplikasi Laravel dengan FrankenPHP
-CMD ["frankenphp", "serve", "--port=80"]
+CMD ["frankenphp", "run", "--port=8000"]
