@@ -1,0 +1,23 @@
+{
+    "apps": {
+      "php": {
+        "root": "public"
+      }
+    },
+    "servers": {
+      "default": {
+        "listen": [":443"],
+        "routes": [
+          {
+            "handle": [
+              {
+                "handler": "reverse_proxy",
+                "upstreams": [{ "dial": "localhost:8000" }]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+  
