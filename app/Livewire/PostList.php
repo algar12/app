@@ -53,7 +53,7 @@ class PostList extends Component
             ->with('author', 'categories')
             ->when($this->activeCategory, function ($query, $category) {
                 $query->whereHas('categories', function ($q) use ($category) {
-                    $q->where('id', $category->id);
+                    $q->where('categories.id', $category->id);
                 });
             })
             ->when($this->popular, function ($query) {
