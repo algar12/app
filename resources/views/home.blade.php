@@ -3,7 +3,7 @@
         <div class="w-full py-32 text-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-lg shadow-lg border border-gray-700">
             <h1 class="text-3xl font-extrabold text-white md:text-4xl lg:text-6xl animate-fade-in">
                 {{ __('home.hero.title') }}
-                <span class="text-cyan-400">&lt;YELO&gt;</span>
+                <span class="text-cyan-400">&lt;pung&gt;</span>
                 <span class="text-white">News</span>
             </h1>
             <p class="mt-3 text-lg text-gray-300 md:text-xl leading-relaxed">{{ __('home.hero.desc') }}</p>
