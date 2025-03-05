@@ -55,7 +55,11 @@ class PostResource extends Resource
                 )->columns(2),
                 Section::make('Meta')->schema(
                     [
-                        FileUpload::make('image')->image()->directory('posts/thumbnails'),
+                        FileUpload::make('image')
+                         ->image()
+                        ->disk('r2') // Menyimpan di Cloudflare R2
+                         ->directory('posts/thumbnails') // Folder penyimpanan di bucket R2
+                         ->visibility('public'), // File bisa diakses secara publik
                         DateTimePicker::make('published_at')->nullable(),
                         Checkbox::make('featured'),
                         Select::make('user_id')
