@@ -7,6 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "aws/aws-sdk-php": "^3.341",
         "filament/filament": "^3.2",
         "flowframe/laravel-trend": "^0.4.0",
         "google/apiclient": "^2.0",
@@ -15,7 +16,7 @@
         "laravel/octane": "^2.8",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
-        "league/flysystem-aws-s3-v3": "^3.29",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "livewire/livewire": "^3.5"
     },
     "require-dev": {

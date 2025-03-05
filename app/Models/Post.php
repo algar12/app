@@ -90,9 +90,15 @@ class Post extends Model
     }
 
     public function getThumbnailUrl()
-    {
-        $isUrl = str_contains($this->image, 'http');
+            {
+                $isUrl = str_contains($this->image, 'http');
 
-        return ($isUrl) ? $this->image : Storage::disk('public')->url($this->image);
-    }
+                // Jika URL sudah ada (mungkin file sudah diupload), kembalikan URL tersebut
+                if ($isUrl) {
+                    return $this->image;
+                }
+                dd($image->getThumbnailUrl());
+                // Jika file ada di R2, kembalikan URL dari R2
+                return Storage::disk('r2')->url($this->image);
+            }
 }
