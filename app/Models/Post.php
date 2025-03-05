@@ -97,7 +97,7 @@ class Post extends Model
                 if ($isUrl) {
                     return $this->image;
                 }
-                dd($image->getThumbnailUrl());
+                // dd($image->getThumbnailUrl());
                 // Jika file ada di R2, kembalikan URL dari R2
                 return Storage::disk('r2')->url($this->image);
             }
