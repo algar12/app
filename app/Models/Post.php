@@ -90,9 +90,11 @@ class Post extends Model
     }
 
     public function getThumbnailUrl()
-    {
-    $isUrl = str_contains($this->image, 'http');
-
-    return ($isUrl) ? $this->image : Storage::disk('s3')->url($this->image);
+{
+    if (str_contains($this->image, 'http')) {
+        return $this->image;
     }
+
+    return Storage::disk('s3')->url($this->image);
+}
 }
