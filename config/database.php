@@ -32,16 +32,18 @@ return [
     'connections' => [
 
         'd1' => [
-                'driver' => 'd1',
-                'prefix' => '',
-                'database' => env('CLOUDFLARE_D1_DATABASE_ID', ''),
-                'api' => 'https://api.cloudflare.com/client/v4',
-                'auth' => [
-                    'token' => env('CLOUDFLARE_TOKEN', ''),
-                    'account_id' => env('CLOUDFLARE_ACCOUNT_ID', ''),
-                ],
-    ],
-
+            'driver' => 'd1',
+            'prefix' => '',
+            'database' => env('CLOUDFLARE_D1_DATABASE_ID', ''),
+            'api' => 'https://api.cloudflare.com/client/v4',
+            'auth' => [
+                'token' => env('CLOUDFLARE_TOKEN', ''),
+                'account_id' => env('CLOUDFLARE_ACCOUNT_ID', ''),
+            ],
+            'options' => [
+                'timeout' => 60, // Tingkatkan timeout jadi 60 detik
+            ],
+        ],
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
