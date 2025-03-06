@@ -7,6 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "algar12/cloudflare-d1-database": "dev-main",
         "aws/aws-sdk-php": "^3.341",
         "doctrine/dbal": "^3.6",
         "filament/filament": "^3.2",
@@ -23,7 +24,6 @@
         "masbug/flysystem-google-drive-ext": "^2.4",
         "munafio/chatify": "^1.6",
         "nesbot/carbon": "^3.8.4",
-        "ntanduy/cloudflare-d1-database": "^0.2.0",
         "pusher/pusher-php-server": "^7.2"
     },
     "require-dev": {

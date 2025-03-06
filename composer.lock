@@ -4,8 +4,88 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ea7a9fe0e577e517854f3dd3a2a2c56",
+    "content-hash": "e24ee1c1c020ceae65a3de69b9a82883",
     "packages": [
+        {
+            "name": "algar12/cloudflare-d1-database",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/algar12/cloudflare-d1-database.git",
+                "reference": "e793fcadda4d4d367667599065035a40bb46f701"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/algar12/cloudflare-d1-database/zipball/e793fcadda4d4d367667599065035a40bb46f701",
+                "reference": "e793fcadda4d4d367667599065035a40bb46f701",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^3.0|^4.0",
+                "illuminate/cache": "*",
+                "illuminate/contracts": "*",
+                "illuminate/database": "*",
+                "illuminate/http": "*",
+                "php": "^8.4",
+                "saloonphp/laravel-http-sender": "^2.0|^3.0",
+                "saloonphp/laravel-plugin": "^3.5",
+                "saloonphp/saloon": "^3.10"
+            },
+            "require-dev": {
+                "laravel/legacy-factories": "^1.4",
+                "mockery/mockery": "^1.6",
+                "orchestra/testbench": "^9.3",
+                "pestphp/pest": "^2.35"
+            },
+            "suggest": {
+                "ext-pdo": "Extending the PDO driver for Cloudflare D1 is requireds."
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ntanduy\\CFD1\\D1ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ntanduy\\CFD1\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "TanDuy03",
+                    "email": "ng.tanduy261203@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easy configuration and setup for D1 Database connections in Laravel.",
+            "homepage": "https://github.com/algar12/cloudflare-d1-database",
+            "keywords": [
+                "TanDuy03",
+                "cloudflare",
+                "d1",
+                "database",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/algar12/cloudflare-d1-database/issues",
+                "source": "https://github.com/algar12/cloudflare-d1-database/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/TanDuy03",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-03-06T19:50:33+00:00"
+        },
         {
             "name": "anourvalar/eloquent-serialize",
             "version": "1.2.29",
@@ -5323,85 +5403,6 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.4.0"
             },
             "time": "2024-12-30T11:07:19+00:00"
-        },
-        {
-            "name": "ntanduy/cloudflare-d1-database",
-            "version": "v0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TanDuy03/cloudflare-d1-database.git",
-                "reference": "b54a082fbb48c4f05e9099ef3968b890ef39a313"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TanDuy03/cloudflare-d1-database/zipball/b54a082fbb48c4f05e9099ef3968b890ef39a313",
-                "reference": "b54a082fbb48c4f05e9099ef3968b890ef39a313",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/dbal": "^3.0|^4.0",
-                "illuminate/cache": "*",
-                "illuminate/contracts": "*",
-                "illuminate/database": "*",
-                "illuminate/http": "*",
-                "php": "^8.2",
-                "saloonphp/laravel-http-sender": "^2.0|^3.0",
-                "saloonphp/laravel-plugin": "^3.5",
-                "saloonphp/saloon": "^3.10"
-            },
-            "require-dev": {
-                "laravel/legacy-factories": "^1.4",
-                "mockery/mockery": "^1.6",
-                "orchestra/testbench": "^9.3",
-                "pestphp/pest": "^2.35"
-            },
-            "suggest": {
-                "ext-pdo": "Extending the PDO driver for Cloudflare D1 is requireds."
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Ntanduy\\CFD1\\D1ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ntanduy\\CFD1\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "TanDuy03",
-                    "email": "ng.tanduy261203@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Easy configuration and setup for D1 Database connections in Laravel.",
-            "homepage": "https://github.com/TanDuy03/cloudflare-d1-database",
-            "keywords": [
-                "TanDuy03",
-                "cloudflare",
-                "d1",
-                "database",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/TanDuy03/cloudflare-d1-database/issues",
-                "source": "https://github.com/TanDuy03/cloudflare-d1-database/tree/v0.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/TanDuy03",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-11-05T05:59:30+00:00"
         },
         {
             "name": "nunomaduro/termwind",
@@ -12973,7 +12974,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "algar12/cloudflare-d1-database": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
