@@ -8,7 +8,7 @@ return [
 
     'hero' => [
         'title' => 'Selamat Datang di',
-        'desc' => 'Blog Terbaik di Alam Semesta',
+        'desc' => 'Tempat Pelajar Berkarya',
         'cta' => 'Mulai Membaca'
     ]
 ];
