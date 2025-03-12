@@ -2,10 +2,10 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between">
         <!-- Left Section -->
         <div class="flex items-center space-x-4">
-            <a href="{{ route('home') }}" class="flex items-center text-xl font-semibold text-blue-600">
-                <x-application-mark />
-                <span class="ml-2">NewsPortal</span>
-            </a>
+        <a href="{{ route('home') }}" class="flex items-center text-xl font-semibold bg-gradient-to-r from-green-500 to-yellow-500 text-transparent bg-clip-text">
+    <x-application-mark />
+    <span class="ml-2">IPNU IPPNU TANJUNGHARJO</span>
+</a>
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-4 text-base font-medium">
