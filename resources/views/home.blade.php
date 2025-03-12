@@ -3,8 +3,8 @@
         <div class="w-full py-32 text-center bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-lg shadow-lg border border-gray-700">
             <h1 class="text-3xl font-extrabold text-white md:text-4xl lg:text-6xl animate-fade-in">
                 {{ __('home.hero.title') }}
-                <span class="text-cyan-400">&lt;pung&gt;</span>
-                <span class="text-white">News</span>
+                <span class="bg-gradient-to-r from-green-500 to-yellow-500 text-transparent bg-clip-text">&lt;IPNU IPPNU&gt;</span>
+                <span class="text-white">TANJUNGHARJO</span>
             </h1>
             <p class="mt-3 text-lg text-gray-300 md:text-xl leading-relaxed">{{ __('home.hero.desc') }}</p>
             <a class="inline-block px-6 py-3 mt-6 text-lg font-semibold text-white transition bg-cyan-500 rounded-full shadow-lg hover:bg-cyan-400 hover:shadow-xl focus:ring-4 focus:ring-cyan-300" href="{{ route('posts.index') }}">
