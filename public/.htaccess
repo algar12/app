@@ -1,25 +1,37 @@
-<IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
+pripnuippnutanjungharjo.my.id {
+    root * /home/ghofur/app/public
+    php_fastcgi frankenphp
+    encode gzip zstd
+    file_server
 
-    RewriteEngine On
+    tls {
+        protocols tls1.2 tls1.3
+    }
 
-    # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    @sitemap {
+        path /sitemap.xml
+    }
+    handle @sitemap {
+        file_server
+    }
 
-    # Handle X-XSRF-Token Header
-    RewriteCond %{HTTP:x-xsrf-token} .
-    RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
+    @notFile {
+        file {
+            try_files {path} /index.php
+        }
+    }
+    rewrite @notFile /index.php
 
-    # Redirect Trailing Slashes If Not A Folder...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^ %1 [L,R=301]
+    header {
+        -MultiViews
+        -Indexes
+        Authorization {http.request.header.Authorization}
+        X-XSRF-Token {http.request.header.X-XSRF-Token}
+    }
 
-    # Send Requests To Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
-</IfModule>
+    # Redirect semua HTTP ke HTTPS
+    @httpOnly {
+        protocol http
+    }
+    redir @httpOnly https://{host}{uri} permanent
+}

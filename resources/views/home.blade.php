@@ -20,7 +20,7 @@
             </h2>
             <div class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 @foreach ($featuredPosts as $post)
-                    <x-posts.post-card :post="$post" class="transform transition duration-300 hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 hover:bg-gray-700 focus:ring-4 focus:ring-gray-600" />
+                   <x-posts.post-card :post="$post" class="transform transition duration-300 hover:scale-105 !bg-white p-5 rounded-lg shadow-md border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200" />
                 @endforeach
             </div>
             <a class="block mt-10 text-lg font-semibold text-center text-cyan-400 hover:text-cyan-300 transition focus:ring-4 focus:ring-cyan-300" href="{{ route('posts.index') }}">
@@ -34,7 +34,7 @@
         </h2>
         <div class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             @foreach ($latestPosts as $post)
-                <x-posts.post-card :post="$post" class="transform transition duration-300 hover:scale-105 bg-gray-800 p-5 rounded-lg shadow-md border border-gray-700 hover:bg-gray-700 focus:ring-4 focus:ring-gray-600" />
+             <x-posts.post-card :post="$post" class="transform transition duration-300 hover:scale-105 !bg-white p-5 rounded-lg shadow-md border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200" />
             @endforeach
         </div>
         <a class="block mt-10 text-lg font-semibold text-center text-cyan-400 hover:text-cyan-300 transition focus:ring-4 focus:ring-cyan-300" href="{{ route('posts.index') }}">
