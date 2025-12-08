@@ -17,7 +17,7 @@
         content="{{ isset($title) ? $title . ' - ' : '' }}{{ config('app.name', 'Kabar Rakyat') }}">
     <meta property="og:description"
         content="{{ isset($description) ? $description : 'Kabar Rakyat - Portal berita terkini, tajam, dan terpercaya.' }}">
-    <meta property="og:image" content="{{ asset('android-chrome-512x512.png') }}">
+    <meta property="og:image" content="{{ asset('images/logo.png') }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -27,7 +27,7 @@
       "@@type": "NewsMediaOrganization",
       "name": "Kabar Rakyat",
       "url": "{{ url('/') }}",
-      "logo": "{{ asset('android-chrome-512x512.png') }}",
+      "logo": "{{ asset('images/logo.png') }}",
       "sameAs": [
         "https://www.instagram.com/kabarrakyat",
         "https://www.facebook.com/kabarrakyat",
@@ -36,12 +36,8 @@
     }
     </script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}"> -->
-    <!-- <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}"> -->
-    <!-- <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('android-chrome-192x192.png') }}"> -->
-    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('android-chrome-512x512.png') }}">
-    <!-- <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> -->
+    <link rel="icon" href="{{ asset('images/favicon-large.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/favicon-large.png') }}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
