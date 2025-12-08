@@ -14,7 +14,13 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Inter', 'sans-serif', ...defaultTheme.fontFamily.sans],
+                serif: ['Merriweather', 'serif'],
+            },
+            colors: {
+                'news-red': '#b91c1c',
+                'news-blue': '#1e3a8a',
+                'paper': '#f9fafb',
             },
         },
     },

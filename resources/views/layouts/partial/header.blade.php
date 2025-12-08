@@ -1,3 +1,3 @@
 <header class="">
-    <livewire:navigation-menu />
+    @include('navigation-menu')
 </header>

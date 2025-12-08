@@ -98,8 +98,8 @@ class Post extends Model
         if ($isUrl) {
             return $this->image;
         }
-        // dd($image->getThumbnailUrl());
-        // Jika file ada di R2, kembalikan URL dari R2
-        return Storage::disk('r2')->url($this->image);
+
+        // Jika file ada di local storage, kembalikan URL dari public disk
+        return Storage::disk('public')->url($this->image);
     }
 }
