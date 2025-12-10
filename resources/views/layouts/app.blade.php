@@ -21,6 +21,9 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Google Site Verification (Uncomment and add your code below) -->
+    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" /> -->
+
     <script type="application/ld+json">
     {
       "@@context": "https://schema.org",
