@@ -61,12 +61,14 @@ class SitemapController extends Controller
 
         $xml .= '</urlset>';
 
-        // Clear output buffer to remove any accidental whitespace/newlines from other files
+        // Aggressive cleaning: End current buffer and discard it
         if (ob_get_length()) {
-            ob_clean();
+            ob_end_clean();
         }
 
-        return response($xml, 200)
-            ->header('Content-Type', 'application/xml');
+        // Send header and content manually
+        header('Content-Type: application/xml');
+        echo $xml;
+        exit;
     }
 }
