@@ -1,0 +1,21 @@
+{
+    "name": "Kabar Rakyat",
+    "short_name": "KabarRakyat",
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "theme_color": "#E11D48",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/images/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
