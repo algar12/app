@@ -35,6 +35,6 @@
     $bgColor = $bgColors[$bgColor] ?? 'bg-gray-100 hover:bg-gray-200';
 @endphp
 
-<button {{ $attributes->merge(['class' => "$textColor $bgColor rounded-xl px-4 py-2 text-base font-medium transition-all duration-200 focus:ring-2 focus:ring-opacity-50"]) }}>
+<button {{ $attributes->merge(['class' => "$textColor $bgColor rounded-lg sm:rounded-xl px-2 sm:px-3 md:px-4 py-0.5 sm:py-1 md:py-2 text-[10px] sm:text-xs md:text-base font-medium transition-all duration-200 focus:ring-2 focus:ring-opacity-50"]) }}>
     {{ $slot }}
 </button>

@@ -9,4 +9,5 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * allow your team to quickly build robust real-time web applications.
  */
 
-import './echo';
+// Uncomment this when you have configured Reverb/Pusher in your .env file
+// import './echo';

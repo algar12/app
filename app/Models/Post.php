@@ -15,6 +15,27 @@ class Post extends Model
     use HasFactory;
     use SoftDeletes;
 
+    /**
+     * Bootstrap the model and its traits.
+     * Clear homepage cache when posts are created, updated, or deleted.
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Clear homepage cache when post is saved (created or updated)
+        static::saved(function () {
+            \Illuminate\Support\Facades\Cache::forget('featuredPosts');
+            \Illuminate\Support\Facades\Cache::forget('latestPosts');
+        });
+
+        // Clear homepage cache when post is deleted
+        static::deleted(function () {
+            \Illuminate\Support\Facades\Cache::forget('featuredPosts');
+            \Illuminate\Support\Facades\Cache::forget('latestPosts');
+        });
+    }
+
     protected $fillable = [
         'user_id',
         'title',
