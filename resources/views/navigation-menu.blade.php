@@ -26,13 +26,13 @@
 
     <!-- Main Navbar -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between transition-all duration-300" :class="scrolled ? 'h-16' : 'h-20'">
+        <div class="flex justify-between transition-all duration-300" :class="scrolled ? 'h-15' : 'h-20'">
             <div class="flex items-center">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center group">
                         <img src="{{ asset('images/logo.png') }}" alt="Kabar Rakyat"
-                            class="w-auto transition-all duration-300" :class="scrolled ? 'h-16' : 'h-20'">
+                            class="w-auto transition-all duration-300" :class="scrolled ? 'h-10' : 'h-20'">
                     </a>
                 </div>
 
