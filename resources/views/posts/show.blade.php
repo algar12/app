@@ -1,4 +1,4 @@
-<x-app-layout :title="$post->title">
+<x-app-layout :title="$post->title" :description="$post->getExcerpt()" :image="$post->getThumbnailUrl()">
     <article class="font-serif">
         <!-- Article Header -->
         <header class="bg-gray-50 py-12 border-b border-gray-200">

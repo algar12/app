@@ -3,8 +3,8 @@
         <div class="flex flex-col gap-8 lg:gap-12">
             <!-- Sidebar (Search & Categories) -->
             <div class="w-full space-y-4 sm:space-y-6 lg:space-y-8">
-                <!-- Search Widget -->
-                @include('posts.partials.search-box')
+                <!-- Search Widget
+                @include('posts.partials.search-box') -->
 
                 <!-- Categories Widget -->
                 <div class="bg-white p-4 sm:p-5 lg:p-6 rounded-lg sm:rounded-xl border border-gray-100 shadow-sm">

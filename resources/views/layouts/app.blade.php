@@ -1,4 +1,4 @@
-@props(['title'])
+@props(['title', 'description' => null, 'image' => null])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -10,16 +10,26 @@
     <title>{{ isset($title) ? $title . ' - ' : '' }}{{ config('app.name', 'Kabar Rakyat') }}</title>
 
     <meta name="description"
-        content="{{ isset($description) ? $description : 'Kabar Rakyat - Portal berita terkini, tajam, dan terpercaya. Menyajikan informasi aktual dari seluruh penjuru Indonesia.' }}">
+        content="{{ $description ?? 'Kabar Rakyat - Portal berita terkini, tajam, dan terpercaya. Menyajikan informasi aktual dari seluruh penjuru Indonesia.' }}">
     <meta name="keywords" content="Berita, Kabar Rakyat, Politik, Ekonomi, Olahraga, Teknologi, Indonesia">
     <meta name="author" content="Kabar Rakyat">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
     <meta property="og:title"
         content="{{ isset($title) ? $title . ' - ' : '' }}{{ config('app.name', 'Kabar Rakyat') }}">
     <meta property="og:description"
-        content="{{ isset($description) ? $description : 'Kabar Rakyat - Portal berita terkini, tajam, dan terpercaya.' }}">
-    <meta property="og:image" content="{{ asset('images/logo.png') }}">
+        content="{{ $description ?? 'Kabar Rakyat - Portal berita terkini, tajam, dan terpercaya.' }}">
+    <meta property="og:image" content="{{ $image ?? asset('images/logo.png') }}">
     <meta property="og:url" content="{{ url()->current() }}">
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+        content="{{ isset($title) ? $title . ' - ' : '' }}{{ config('app.name', 'Kabar Rakyat') }}">
+    <meta name="twitter:description"
+        content="{{ $description ?? 'Kabar Rakyat - Portal berita terkini, tajam, dan terpercaya.' }}">
+    <meta name="twitter:image" content="{{ $image ?? asset('images/logo.png') }}">
 
     <!-- Google Site Verification (Uncomment and add your code below) -->
     <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" /> -->
