@@ -121,6 +121,6 @@ class Post extends Model
         }
 
         // Jika file ada di local storage, kembalikan URL dari public disk
-        return Storage::disk('public')->url($this->image);
+        return url(Storage::disk('public')->url($this->image));
     }
 }

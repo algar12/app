@@ -66,7 +66,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="{{ secure_asset('js/filament/widgets/components/chart.js') }}"></script>
+    <script type="module" src="{{ secure_asset('js/filament/widgets/components/chart.js') }}"></script>
     <!-- Styles -->
     @livewireStyles
 </head>
