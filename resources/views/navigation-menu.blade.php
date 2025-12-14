@@ -1,11 +1,11 @@
-<nav x-data="{ open: false, categoryOpen: false, scrolled: false }"
-    @scroll.window="scrolled = (window.pageYOffset > 20)"
-    class="sticky top-0 z-50 transition-all duration-300 font-sans"
-    :class="{ 'bg-white border-b border-gray-200 shadow-sm': !scrolled, 'bg-white/80 backdrop-blur-lg border-b border-gray-200/50 shadow-md': scrolled }">
+<nav class="w-full">
     <!-- Breaking News Ticker -->
-    <div x-show="!scrolled" x-transition:leave="transition ease-in duration-200"
-        x-transition:leave-start="opacity-100 max-h-10" x-transition:leave-end="opacity-0 max-h-0"
-        class="bg-news-red text-white text-xs py-1 overflow-hidden relative transition-all duration-300">
+    <div x-show="!scrolled" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 -translate-y-full max-h-0"
+        x-transition:enter-end="opacity-100 translate-y-0 max-h-10" x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 translate-y-0 max-h-10"
+        x-transition:leave-end="opacity-0 -translate-y-full max-h-0"
+        class="bg-news-red text-white text-xs py-1 overflow-hidden relative transition-all duration-300 origin-top">
         <div class="container mx-auto px-4 flex items-center">
             <span class="font-bold uppercase tracking-wider mr-4 bg-red-800 px-2 py-0.5 rounded-sm">Breaking News</span>
             <div class="flex-1 overflow-hidden whitespace-nowrap">
@@ -26,13 +26,14 @@
 
     <!-- Main Navbar -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between transition-all duration-300" :class="scrolled ? 'h-15' : 'h-20'">
+        <div class="flex justify-between transition-all duration-500 ease-in-out" :class="scrolled ? 'h-16' : 'h-24'">
             <div class="flex items-center">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('home') }}" class="flex items-center group">
-                        <img src="{{ asset('images/logo.png') }}" alt="Kabar Rakyat"
-                            class="w-auto transition-all duration-300" :class="scrolled ? 'h-10' : 'h-20'">
+                        <img src="{{ asset('images/logo1.png') }}" alt="Kabar Rakyat"
+                            class="w-auto transition-all duration-500 ease-in-out object-contain"
+                            :class="scrolled ? 'h-12' : 'h-20'">
                     </a>
                 </div>
 

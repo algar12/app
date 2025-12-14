@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             <!-- Column 1: About -->
             <div>
-                <img src="{{ asset('images/logo.png') }}" alt="Kabar Rakyat" class="h-32 mb-6">
+                <img src="{{ asset('images/logo1.png') }}" alt="Kabar Rakyat" class="h-32 mb-6">
                 <p class="text-gray-400 text-sm leading-relaxed mb-6">
                     Menyajikan berita terkini, tajam, dan terpercaya. Suara hati nurani rakyat untuk Indonesia yang
                     lebih baik.
